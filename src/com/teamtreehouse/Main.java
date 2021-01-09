@@ -3,14 +3,12 @@ package com.teamtreehouse;
 public class Main {
 
     public static void main(String[] args) {
-        Milk milk = new Milk();
-        Oranges oranges = new Oranges();
 
         Box<Milk> boxOfMilk = new Box<>();
         Box<Oranges> boxOfOranges = new Box<>();
 
-        debugAdd(milk, boxOfMilk);
-        debugAdd(oranges, boxOfOranges);
+        debugAdd(new Milk(), boxOfMilk);
+        debugAdd(new Oranges(), boxOfOranges);
 
         ((Milk)boxOfMilk.remove()).drink();
         ((Oranges)boxOfOranges.remove()).juggle();
