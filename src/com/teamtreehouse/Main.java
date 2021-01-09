@@ -7,11 +7,11 @@ public class Main {
         Box<Milk> boxOfMilk = new Box<>();
         Box<Oranges> boxOfOranges = new Box<>();
 
-        debugAdd(new Milk(), boxOfMilk);
-        debugAdd(new Oranges(), boxOfOranges);
+        boxOfMilk.add(new Milk());
+        boxOfMilk.remove().drink();
 
-        ((Milk)boxOfMilk.remove()).drink();
-        ((Oranges)boxOfOranges.remove()).juggle();
+        boxOfOranges.add(new Oranges());
+        boxOfOranges.remove().juggle();
     }
 
     static <T> void debugAdd(T item, Box<T> box) {
